@@ -5,7 +5,6 @@ A simple to-do list website
 ## Features
 
 - Customize your Profile.
-- Multiple containers for better task organization.
 - Utilize multiple containers for improved task organization.
 - Add, remove and edit tasks.
 - Local Storage
