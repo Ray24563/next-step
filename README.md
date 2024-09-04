@@ -20,7 +20,7 @@ https://next-step-todo-list.neocities.org/
 
 **Libraries:** Day.js
 
-**Hosting:** Neocrites
+**Hosting:** Neocities
 
 
 ## Usage/Instructions
