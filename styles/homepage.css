@@ -1,0 +1,536 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.user-pic{
+  width: 17em;
+  height: 17em;
+  border-radius: 50%;
+  display: block;
+  transition: opacity 0.3s;
+  border: #D8E0E1 solid 0.7px;
+  object-fit: cover; /* Ensures the image covers the entire container */
+  object-position: center; /* Centers the image within the container */
+}
+
+.user-pic:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+aside{
+  background-color: #4E3787;
+  padding: 1.5em 1.5em;
+  border-radius: 7px;
+  width: 23em;
+  height: 43em;
+  margin-top: 0.2em;
+}
+
+.select-pic{
+  display: none;
+}
+
+.user-nickname{
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  margin-top: 0.5em;
+  color: #D8E0E1;
+  margin-bottom: 0.7em;
+  font-size: 2.5em;
+  overflow-wrap: break-word; 
+  word-break: break-word;
+  text-transform: capitalize;
+}
+
+.user-info p{
+  font-family: 'Lato', sans-serif;
+  color: #D8E0E1;
+  font-size: 0.5em;
+}
+
+.info-container{
+  max-width: 18em;
+  margin-bottom: 1.6em;
+}
+
+.category{
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.profile-container{
+  display: flex;
+  justify-content: center;
+}
+
+.user-input{
+  font-size: 2em;
+  text-align: center;
+}
+
+.user-greetings{
+  font-family: 'Lato', sans-serif;
+  font-size: 2em;
+  margin-left: 1em;
+  font-weight: bolder;
+  margin-top: 1em;
+}
+
+.below-nav{
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-plus-circle {
+  color:#4E3787;
+  margin-right: 0.5em;
+}
+
+.fa-trash{
+  color:#4E3787;
+}
+
+.fa-trash:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.orig-circle{
+  margin-top: 0.5em;
+}
+
+.right-side{
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  margin-right: 1em;
+  width: 5em;
+  height: 2.5em;
+  background-color: #4E3787;
+  color: #D8E0E1;
+  border: none;
+  border-radius: 2.5em;
+  transition: opacity 0.5s;
+}
+
+.button-div{
+  margin-top: 2em;
+}
+
+.right-side:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.todo-container{
+  background: #D8E0E1;
+  width: 32em;
+  height: 23em;
+  margin-top: 0.2em;
+  padding: 1em 1em;
+  border-radius: 7px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.todo-container::-webkit-scrollbar{
+  display: none;
+}
+
+.main-content{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.container-title{
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  cursor: pointer;
+  width: 11em;
+  overflow-wrap: break-word; 
+  word-break: break-word;
+}
+
+.todo-grid{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  column-gap: 2em;
+  row-gap: 2em;
+}
+
+main{
+  margin-top: 0.7em;
+}
+
+.title-flex{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8em;
+}
+
+.todo-category-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  column-gap: 1em;
+  row-gap: 1em;
+}
+
+.container-category{
+  margin-top: 0.5em;
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 0;
+}
+
+.chicha{
+  margin-top: 0.5em;
+}
+
+.fa-pencil{
+  margin-right: 1em;
+  color:#4E3787;
+  cursor: pointer;
+}
+
+.edit-add{
+  margin-top: 0.3em;
+}
+
+@media (max-width: 2000px) {
+  .todo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1600px) {
+  .todo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1520px) {
+  .todo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1070px) {
+  .main-content{
+    display: block;
+  }
+
+  aside,
+  .todo-container{
+    width: 100%;
+  }
+
+  .todo-grid{
+    margin-top: 2em;
+    column-gap: 0;
+  }
+
+  .right-side{
+    margin-right: 0;
+  }
+
+  .user-pic{
+    width: 20em;
+    height: 20em;
+  }
+
+  aside{
+    height: 100%;
+  }
+
+  .main-content{
+    justify-content: center;
+  }
+}
+
+@media (max-width: 775px) {
+  .below-nav{
+    display: block;
+  }
+
+  .user-greetings{
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 2em;
+    margin-left: 0;
+  }
+
+  .button-div{
+    text-align: center;
+  }
+
+  .right-side{
+    margin-right: 0;
+    margin-bottom: 1em;
+  }
+}
+
+@media (max-width: 503px) {
+  .edit-task{
+    margin-top: 1em;
+  }
+
+  .user-greetings{
+    font-size: 1.7em;
+    margin-left: 0;
+  }
+}
+
+.save-button {
+  display: none;
+}
+
+.edit-container-name {
+  display: none;
+}
+
+.editing-title .edit-container-name {
+  display: initial;
+}
+
+.editing-title .container-title {
+  display: none;
+}
+
+.editing-title .save-button {
+  display: initial;
+  margin-right: 0.7em;
+}
+
+.save-button-css{
+  background-color: #4E3787;
+  color: #D8E0E1;
+  border: none;
+  border-radius: 2.5em;
+  transition: opacity 0.5s;
+  padding: 0.4em 1.3em;
+  font-size: 0.8em;
+}
+
+.save-button-css:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.input-task{
+  display: initial;
+  width: 100%;
+}
+
+.input-time{
+  display: initial;
+  width: 100%;
+}
+
+.save-task{
+  display: initial;
+  background-color: #4E3787;
+  color: #D8E0E1;
+  border: none;
+  border-radius: 2.5em;
+  transition: opacity 0.5s;
+  padding: 0.6em 1.4em;
+  font-size: 0.8em;
+}
+
+.save-task:hover{
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.add-task-css:hover{
+  cursor: pointer;
+}
+
+.display-task{
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  text-transform: capitalize;
+  width: 100%; 
+  overflow-wrap: break-word; 
+  word-break: break-word;
+  margin-top: 0.3em; 
+}
+
+.done-button{
+  background-color: #4E3787;
+  border: none;
+  color: #D8E0E1;
+  padding: 0.5em 0.8em;
+  border-radius: 1em;
+  transition: opacity 0.5s;
+}
+
+.edit-task{
+  background-color: #4E3787;
+  border: none;
+  color: #D8E0E1;
+  padding: 0.5em 0.8em;
+  border-radius: 1em;
+  transition: opacity 0.5s;
+}
+
+.done-button:hover{
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.edit-task:hover{
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.edit-task-name{
+  width: 7em;
+}
+
+.edit-task-name,
+.edit-date,
+.save-edit-task {
+  display: none;
+}
+
+.edit-stored-task.edit-task-name,
+.edit-stored-task.edit-date,
+.edit-stored-task.save-edit-task {
+  display: initial;
+}
+
+.edit-stored-task.display-task,
+.edit-stored-task.done-button,
+.edit-stored-task.edit-task {
+  display: none;
+}
+
+.save-edit-task{
+  background-color: #4E3787;
+  color: #D8E0E1;
+  border: none;
+  border-radius: 2.5em;
+  transition: opacity 0.5s;
+  padding: 0.6em 1.4em;
+  font-size: 0.8em;
+}
+
+.save-edit-task:hover{
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.omedeto{
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  color: green;
+  font-weight: bold;
+  margin-top: 0.3em;
+  display: none;
+}
+
+.omedeto-display{
+  display: initial;
+}
+
+.input-name, 
+.input-age, 
+.input-birth, 
+.input-address,
+.edit-nickname,
+.save-info{
+  display: none;
+}
+
+.edit-info,
+.save-info{
+  font-family: 'Lato', sans-serif;
+  color: #4E3787;
+  background-color: #D8E0E1;
+  border: none;
+  border-radius: 2.5em;
+  transition: opacity 0.5s;
+  padding: 0.4em 1.3em;
+  margin-top: 1em;
+}
+
+.edit-info:hover,
+.save-info:hover{
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.middle-button{
+  display: flex;
+  justify-content: center;
+}
+
+/* This CSS selector with plus sign is called Adjacent Sibling Combinator
+It selects the element that comes after the specified element.
+It means that those class will only be selected if they immediately follow 
+an element with the class ".input-task". 
+
+Since input-name and others was below of input-task, therefore, Adjacent Sibling Combinator
+is applicable in this situation*/
+.input-task + .input-name,
+.input-task + .input-age,
+.input-task + .input-birth,
+.input-task + .input-address,
+.input-task + .edit-nickname,
+.input-task + .save-info {
+  display: initial;
+}
+
+/*This CSS selector called "Class Combination" only works if a specific element
+have both the "input-task" class and other specified element*/
+.input-task.user-nickname,
+.input-task.user-name,
+.input-task.user-age,
+.input-task.user-birth,
+.input-task.user-address {
+  display: none;
+}
+
+.input-task.edit-info{
+  display: none;
+}
+
+.edit-nickname{
+  margin-top: 2em;
+  margin-bottom: 1.7em;
+  padding: 0.7em 0.5em;
+  border-radius: 7px;
+}
+
+.input-name,
+.input-age,
+.input-birth,
+.input-address{
+  padding: 0.5em 0.5em;
+  border-radius: 7px;
+}
+
+.user-name,
+.user-address{
+  text-transform: capitalize;
+}
+
+@media (max-width: 360px) {
+  .user-pic{
+    width: 15em;
+    height: 15em;
+  }
+
+  .container-category,
+  .display-task{
+    font-size: 0.8em;
+  }
+}
+
+/* Fix the responsiveness
+
+

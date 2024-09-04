@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+footer{
+  background-color: #4E3787;
+  padding: 1em 20em ;
+  border-radius: 7px;
+}
+
+.footer-title{
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  color: #D8E0E1;
+  font-size: 3em;
+}
+
+.footer-parag{
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  color: #D8E0E1;
+  margin-top: 0;
+  margin-bottom: 2em;
+  font-style: italic;
+}
+
+.icon-flex{
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  margin-bottom: 2em;
+}
+
+.fa-facebook{
+  color:#D8E0E1;
+  padding: 0.5em 0.7em;
+  border-radius: 50%;
+  border: solid 2px #D8E0E1;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.fa-facebook:hover{
+  background-color:#D8E0E1;
+  color: #4E3787;
+  cursor: pointer;
+}
+
+.fa-instagram{
+  color:#D8E0E1;
+  padding: 0.5em 0.7em;
+  border-radius: 50%;
+  border: solid 2px #D8E0E1;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.fa-instagram:hover{
+  background-color:#D8E0E1;
+  color: #4E3787;
+  cursor: pointer;
+}
+
+.fa-google{
+  color:#D8E0E1;
+  padding: 0.5em 0.7em;
+  border-radius: 50%;
+  border: solid 2px #D8E0E1;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.fa-google:hover{
+  background-color:#D8E0E1;
+  color: #4E3787;
+  cursor: pointer;
+}
+
+.fa-twitter{
+  color:#D8E0E1;
+  padding: 0.5em 0.7em;
+  border-radius: 50%;
+  border: solid 2px #D8E0E1;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.fa-twitter:hover{
+  background-color:#D8E0E1;
+  color: #4E3787;
+  cursor: pointer;
+}
+
+.fa-telegram{
+  color:#D8E0E1;
+  padding: 0.5em 0.7em;
+  border-radius: 50%;
+  border: solid 2px #D8E0E1;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.fa-telegram:hover{
+  background-color:#D8E0E1;
+  color: #4E3787;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  footer{
+    padding: 1em 10em;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-title{
+    font-size: 2em ;
+  }
+
+  .footer-parag{
+    width: 100%;
+  }
+
+  footer{
+    padding: 1em 1em;
+  }
+}
